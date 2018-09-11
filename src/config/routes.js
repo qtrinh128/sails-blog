@@ -24,9 +24,10 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'pages/homepage'
-  },
+  '/':    'HomeController.home',
+  //REGISTER
+  'GET /register':          'AccountController.register',
+  'POST /register':          'AccountController.register',
 
   /***************************************************************************
   *                                                                          *
