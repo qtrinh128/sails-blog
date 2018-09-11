@@ -1,0 +1,60 @@
+<form action="<%= sails.getUrlFor('AccountController.register'); %>" method="POST">
+  <table>
+            <% if(notices.length > 0){ %>
+                  <% _.each(notices, function(notice){ %>
+                        <p><%= notice.message %></p>
+                  <% }) %>
+            <% } %>
+    <tr>
+      <td>
+            <label for="name">Tên</label>
+      </td>
+      <td>
+            <input type="text" name="name" id="name" required>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <label for="email">Email</label>
+
+      </td>
+      <td>
+            <input type="email" name="email" id="email" required>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <label for="password">Mật khẩu</label>
+
+      </td>
+      <td>
+            <input type="password" name="password" id="password" required>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <label for="rePassword">Nhập lại mật khẩu</label>
+
+      </td>
+      <td>
+            <input type="password" name="rePassword" id="rePassword" required>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <label for="code">Mã đăng ký</label>
+
+      </td>
+      <td>
+            <input type="text" name="code" id="code" required>
+
+      </td>
+    </tr>
+  </table>
+  <input type="submit" value="Register">
+</form>
+<a href="<%= sails.getUrlFor('HomeController.home'); %>">Quay lại</a>
