@@ -1,0 +1,9 @@
+<h3>Dashboard</h3>
+<% if(notices.length > 0){ %>
+    <% _.each(notices, function(notice){ %>
+    <p>
+        <%= notice.message %>
+    </p>
+    <% }) %>
+<% } %>
+<a href="<%= sails.getUrlFor('AccountController.logout'); %>">Logout</a>
