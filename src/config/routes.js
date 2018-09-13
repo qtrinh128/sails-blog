@@ -26,17 +26,18 @@ module.exports.routes = {
 
   '/':    'HomeController.home',
   //REGISTER
-  'GET /register':          'AccountController.register',
-  'POST /register':          'AccountController.register',
+  'GET /register':         'AccountController.register',
+  'POST /register':        'AccountController.register',
   //LOGIN
-  'GET /login':             'AccountController.login',
-  'POST /login':             'AccountController.login',
+  'GET /login':            'AccountController.login',
+  'POST /login':           'AccountController.login',
   //LOGOUT
-  'GET /logout':            'AccountController.logout',
+  'GET /logout':           'AccountController.logout',
   //ADMIN
-  'GET /admin':             'admin/AdminController.home',
-  'GET /user':              'admin/UserController.home',
-  'GET /id':                'admin/UserController.delete',
+  'GET /admin':           'admin/AdminController.home',
+  'GET /user':            'admin/UserController.home',
+  'GET /delete':          'admin/UserController.delete',
+  'GET /check':           'admin/UserController.checkNumberUser',
   
 
   /***************************************************************************
