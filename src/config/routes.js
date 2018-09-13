@@ -36,6 +36,7 @@ module.exports.routes = {
   //ADMIN
   'GET /admin':             'admin/AdminController.home',
   'GET /user':              'admin/UserController.home',
+  'GET /id':                'admin/UserController.delete',
   
 
   /***************************************************************************
