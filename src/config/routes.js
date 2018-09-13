@@ -28,6 +28,16 @@ module.exports.routes = {
   //REGISTER
   'GET /register':          'AccountController.register',
   'POST /register':          'AccountController.register',
+  //LOGIN
+  'GET /login':             'AccountController.login',
+  'POST /login':             'AccountController.login',
+  //LOGOUT
+  'GET /logout':            'AccountController.logout',
+  //ADMIN
+  'GET /admin':             'admin/AdminController.home',
+  'GET /user':              'admin/UserController.home',
+  'GET /id':                'admin/UserController.delete',
+  
 
   /***************************************************************************
   *                                                                          *

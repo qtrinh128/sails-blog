@@ -18,5 +18,10 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
+  '*': 'isLogged',
+
+  // Bypass the `is-logged-in` policy for:
+  'Home/*': true,
+  'Account/*': true,
 
 };

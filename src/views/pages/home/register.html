@@ -7,10 +7,10 @@
             <% } %>
     <tr>
       <td>
-            <label for="name">Tên</label>
+            <label for="name">User name</label>
       </td>
       <td>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" required value="t123">
 
       </td>
     </tr>
@@ -20,41 +20,41 @@
 
       </td>
       <td>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" required value="t123@gmail.com">
 
       </td>
     </tr>
     <tr>
       <td>
-            <label for="password">Mật khẩu</label>
+            <label for="password">Password</label>
 
       </td>
       <td>
-            <input type="password" name="password" id="password" required>
-
-      </td>
-    </tr>
-    <tr>
-      <td>
-            <label for="rePassword">Nhập lại mật khẩu</label>
-
-      </td>
-      <td>
-            <input type="password" name="rePassword" id="rePassword" required>
+            <input type="password" name="password" id="password" required value="123123">
 
       </td>
     </tr>
     <tr>
       <td>
-            <label for="code">Mã đăng ký</label>
+            <label for="rePassword">re-password</label>
 
       </td>
       <td>
-            <input type="text" name="code" id="code" required>
+            <input type="password" name="rePassword" id="rePassword" required value="123123">
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <label for="code">Code register</label>
+
+      </td>
+      <td>
+            <input type="text" name="code" id="code" required value="123123">
 
       </td>
     </tr>
   </table>
   <input type="submit" value="Register">
 </form>
-<a href="<%= sails.getUrlFor('HomeController.home'); %>">Quay lại</a>
+<a href="<%= sails.getUrlFor('HomeController.home'); %>">Back to home</a>
