@@ -35,7 +35,13 @@ module.exports.routes = {
   'GET /logout':           'AccountController.logout',
   //ADMIN
   'GET /admin':           'admin/AdminController.home',
+  // user
   'GET /user':            'admin/UserController.home',
+  // post
+  'GET /post':            'admin/PostController.home',
+  'GET /add-post':            'admin/PostController.add',
+  'POST /add-post':            'admin/PostController.add',
+  // AJAX
   'GET /delete':          'admin/UserController.delete',
   'GET /check':           'admin/UserController.checkNumberUser',
   
