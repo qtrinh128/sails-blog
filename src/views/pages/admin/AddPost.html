@@ -1,0 +1,40 @@
+<script src="/ckediter/ckeditor.js"></script>
+
+<div class="panel-body">
+  <form class="form-group" action="<%= sails.getUrlFor('admin/PostController.add'); %>" method="POST">
+    <input type="hidden" name="_csrf" value="<%- _csrf %>" />
+    <div class="form-group">
+      <label for="name">Name post:</label>
+      <input type="text" class="form-control" name="name" id="name">
+    </div>
+    <div class="form-group">
+      <label for="des">Description:</label>
+      <input type="text" class="form-control" name="des" id="des">
+    </div>
+    <div class="form-group">
+      <textarea name="content" id="editor1" rows="10" cols="100"></textarea>
+    <script data-sample="1">
+        CKEDITOR.replace('editor1', {
+            height: 350,
+            customConfig: 'ckediter/configckeditor.js',
+        });
+    </script>
+    </div>
+    <div class="form-group">
+      <label for="tags">Tags:</label>
+      <input type="text" class="form-control" name="tags" id="tags">
+    </div>
+    <div class="form-group">
+      <label for="file">Image:</label>
+      <input type="file" class="form-control" name="file" id="file">
+    </div>
+    <div class="form-group">
+      <select name="category" class="form-control">
+        <% _.each(listCategory, function(category){ %>
+          <option value="<%= category.id %>"><%= category.name %></option>
+        <% }) %>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
+  </form>
+</div>
