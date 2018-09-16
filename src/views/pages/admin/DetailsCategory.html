@@ -1,0 +1,16 @@
+<div class="panel-body">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><%= categorys.name %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% _.each(categorys.posts, function(post){ %>
+          <tr>
+            <td><%= post.name %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+</div>

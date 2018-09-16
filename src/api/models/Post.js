@@ -15,11 +15,14 @@ module.exports = {
 		},
     image: {
       type: 'string',
-      required: true
+      defaultsTo: 'image.png'
     },
     tag: {
       type: 'string',
       required: true
+    },
+    owner: {
+      model: 'Category'
     }
   }
 }

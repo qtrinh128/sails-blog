@@ -38,9 +38,14 @@ module.exports.routes = {
   // user
   'GET /user':            'admin/UserController.home',
   // post
-  'GET /post':            'admin/PostController.home',
+  'GET /posts':            'admin/PostController.home',
   'GET /add-post':            'admin/PostController.add',
   'POST /add-post':            'admin/PostController.add',
+  // category
+  'GET /categorys':         'admin/CategoryController.home',
+  'GET /add-category':            'admin/CategoryController.add',
+  'POST /add-category':            'admin/CategoryController.add',
+  'GET /details-post':                'admin/CategoryController.details',
   // AJAX
   'GET /delete':          'admin/UserController.delete',
   'GET /check':           'admin/UserController.checkNumberUser',
