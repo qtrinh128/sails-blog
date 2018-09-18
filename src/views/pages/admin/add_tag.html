@@ -1,0 +1,9 @@
+<div class="panel-body">
+  <form class="form-group" action="<%= sails.getUrlFor('admin/TagController.add'); %>" method="POST">
+    <div class="form-group">
+      <label for="name">Name tag:</label>
+      <input type="text" class="form-control" name="name" id="name">
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
+  </form>
+</div>

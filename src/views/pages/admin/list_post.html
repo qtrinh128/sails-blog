@@ -13,12 +13,14 @@
       </thead>
       <tbody>
         <% _.each(listPost, function(post){ %>
-        <tr>
-          <td><%= post.name %></td>
-        </tr>
+          <tr id="<%= post.id %>">
+            <td><a href="#"><%= post.name %></a></td>
+            <td><a href="#" onclick="clickDelete('<%= post.id %>')" class="btn btn-danger">Delete</a></td>
+          </tr>
         <% }) %>
       </tbody>
     </table>
   </div>
 </div>
 </div>
+<script src="/admin/js/ajax_list_post.js"></script>
