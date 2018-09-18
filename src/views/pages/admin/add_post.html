@@ -1,4 +1,5 @@
 <script src="/ckediter/ckeditor.js"></script>
+<script src="/admin/js/get_tag_for_post.js"></script>
 
 <div class="panel-body">
   <form class="form-group" action="<%= sails.getUrlFor('admin/PostController.add'); %>" method="POST">
@@ -21,8 +22,12 @@
     </script>
     </div>
     <div class="form-group">
-      <label for="tags">Tags:</label>
+      <label for="tags">Tags: (Các tag cách nhau bởi dấu phẩy)</label>
       <input type="text" class="form-control" name="tags" id="tags">
+      <input type="text" class="form-control" name="idTag" id="idTags">
+      <% _.each(listTag, function(tag){ %>
+        <span id="<%= tag.id %>" onclick="getText('<%= tag.id %>')"><%= tag.name %></span> <span>,</span>
+      <% }) %>
     </div>
     <div class="form-group">
       <label for="file">Image:</label>

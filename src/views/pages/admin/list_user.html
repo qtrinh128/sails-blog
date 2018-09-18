@@ -4,7 +4,8 @@
     <% _.each(listUser, function(user){ %>
         <div id="<%= user.id %>">
             <a href="#"><%= user.name %></a> <br>
-            <a href="#"  onclick="clickDelete('<%= user.id%>')">Delete</a> <br>
+            <a href="#"  onclick="clickDelete('<%= user.id %>')">Delete</a> <br>
         </div>
     <% }) %>
 </div>
+<script src="/admin/js/ajax_list_user.js"></script>

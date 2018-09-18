@@ -11,7 +11,7 @@ function createObj() {
 let http = createObj();
 
 function getData(id) {
-  http.open('GET', 'delete?id=' + id);
+  http.open('GET', 'delete-user?id=' + id);
   http.onreadystatechange = function () {
     if (http.readyState === 4 && http.status === 200) {
       let id = http.responseText;
@@ -27,7 +27,7 @@ function clickDelete(id) {
     getData(id);
     $("#notice").fadeIn();
     $('#notice').fadeOut(0).promise().done(function () {
-      http.open('GET', 'check');
+      http.open('GET', 'check-user');
       http.onreadystatechange = function () {
         if (http.readyState === 4 && http.status === 200) {
           let url = http.responseText;

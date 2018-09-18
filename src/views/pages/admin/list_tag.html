@@ -1,0 +1,21 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% _.each(listTag, function(tag, index){%>
+        <tr id="<%= tag.id %>">
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= tag.name %></td>
+            <td>Edit</td>
+            <td><a href="#" onclick="clickDelete('<%= tag.id %>')">Delete</a></td>
+          </tr>
+      <%})%>
+    </tbody>
+  </table>
+</div>
+<script src="admin/js/ajax_list_tag.js"></script>
